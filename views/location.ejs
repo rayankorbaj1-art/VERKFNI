@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= siteName %> - Famous Waterfall in Iceland</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<main>
+    <section class="hero">
+        <h1> <%= siteName %></h1>
+        <h2>The Golden Waterfall of <%= country %></h2>
+    </section>
+
+    <section class="location-info">
+        <h2>📍 Geographic Information</h2>
+        <p><strong>Location:</strong> <%= location %></p>
+        <p><strong>Coordinates:</strong> <%= coordinates %></p>
+        <p><strong>Height:</strong> <%= height %></p>
+        <p><strong>Flow Rate:</strong> <%= flowRate %></p>
+        <p><strong>Best Time to Visit:</strong> <%= bestTime %></p>
+    </section>
+
+    <section class="description">
+        <h2> About <%= siteName %></h2>
+        <p><%= description %></p>
+    </section>
+
+    <section class="features">
+        <h2> Key Features</h2>
+        <ul>
+            <% features.forEach(feature => { %>
+                <li>✓ <%= feature %></li>
+            <% }); %>
+        </ul>
+    </section>
+
+    <section class="map">
+        <h2> Location Map</h2>
+        <img src="/<%= image %>" alt="<%= siteName %> in Iceland">
+        <p class="map-note"> <%= siteName %> is located on the Golden Circle route, about 115 km from Reykjavík</p>
+    </section>
+  <%# Just one section for a fact %>
+    <section class="fun-fact">
+        <h2> Fun Facts</h2>
+        <p> On a sunny day, the mist from the waterfall creates beautiful rainbows that give the waterfall its name "Golden Falls".</p>
+        <p> In winter, parts of the waterfall freeze, creating stunning ice formations.</p>
+        <p> There is a legend that a hidden treasure lies somewhere behind the cascading water!</p>
+    </section>
+</main>
+
+<%- include('partials/footer') %>
+
+</body>
+</html>

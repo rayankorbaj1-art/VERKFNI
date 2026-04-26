@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Static files service (CSS and images)
-app.use(express.static('css'));
+app.use(express.static('scss'));
 app.use(express.static('images'));
 
 // Route for the homepage - FB menu
@@ -22,11 +22,11 @@ app.get('/', (req, res) => {
              { name: 'Snack', description: 'Cookies', price: 3, image: 'snack.jpg' }
         ],
         weeklyMenu: [
-            { day: 'Monday', meals: ['Pancakes', 'Spaghetti', 'Fruit salad'] },
-            { day: 'Tuesday', meals: ['French toast', 'Grilled cheese', 'Ice cream'] },
-            { day: 'Wednesday', meals: ['Bagel with cream cheese', 'Chicken wrap', 'Brownie'] },
-            { day: 'Thursday', meals: ['Muffin', 'Fish and chips', 'Cupcake'] },
-            { day: 'Friday', meals: ['Croissant', 'Pizza', 'Chocolate pudding'] }
+            'Monday: Pancakes, Spaghetti, Fruit salad',
+            'Tuesday: French toast, Grilled cheese, Ice cream',
+            'Wednesday: Bagel with cream cheese, Chicken wrap, Brownie',
+            'Thursday: Muffin, Fish and chips, Cupcake',
+            'Friday: Croissant, Pizza, Chocolate pudding'
         ]
     };
 

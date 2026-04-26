@@ -1,0 +1,187 @@
+// Variables
+$primary-color: #2ecc71;
+$waterfall-color: #00BCD4;
+$ice-color: #4FC3F7;
+$bg-color: #E1F5FE;
+$text-color: #333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Header styles
+header {
+    background: linear-gradient(135deg, $primary-color, $waterfall-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        margin-top: 10px;
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            
+            &:hover {
+                background: rgba(255,255,255,0.2);
+            }
+        }
+    }
+}
+
+// Food menu styles
+.food-item {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    img {
+        width: 100px;
+        border-radius: 10px;
+    }
+    
+    .price {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}
+
+.weekly-menu {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+    ul {
+        list-style: none;
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Gullfoss waterfall styles
+.hero {
+    background: linear-gradient(135deg, $waterfall-color, $ice-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    
+    h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+}
+
+.location-info, .description, .features, .map, .fun-fact {
+    background: white;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    h2 {
+        color: $waterfall-color;
+        border-bottom: 3px solid $waterfall-color;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+.features ul {
+    list-style: none;
+    li {
+        padding: 10px 0;
+        
+        &:before {
+            content: "💧 ";
+            color: $waterfall-color;
+        }
+    }
+}
+
+.map {
+    text-align: center;
+    
+    img {
+        width: 100%;
+        max-width: 550px;
+        border-radius: 15px;
+        margin: 20px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+    
+    .map-note {
+        color: $waterfall-color;
+        font-weight: bold;
+        background: #E1F5FE;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+}
+
+.fun-fact {
+    background: linear-gradient(135deg, #E1F5FE, #B3E5FC);
+    border-right: 5px solid $waterfall-color;
+    
+    p {
+        margin: 10px 0;
+    }
+}
+
+// Footer styles
+footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    
+    p {
+        margin: 5px 0;
+    }
+}

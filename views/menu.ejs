@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= schoolName %> Food Menu</title>
+    <link rel="stylesheet" href="/style.scss">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+    <%# menu section,show the img in the web %>
+    <main>
+        <section class="menu-day">
+            <h2> Today's Menu - <%= today %></h2>
+        
+        <% meals.forEach(meal => { %>
+            <div class="food-item">
+                <img src="/<%= meal.image %>" alt="<%= meal.name %>">
+                <h3><%= meal.name %></h3>
+                <p><%= meal.description %></p>
+                <span class="price"><%= meal.price %> ISK</span>
+            </div>
+        <% }); %>
+       <section class="weekly-menu">
+    <h2> Weekly Menu</h2>
+    
+    <% if(weeklyMenu && weeklyMenu.length > 0) { %>
+        <ul>
+            <% for(let i = 0; i < weeklyMenu.length; i++) { %>
+                <li><%= weeklyMenu[i] %></li>
+            <% } %>
+        </ul>
+    <% } else { %>
+        <p> No menu items found!</p>
+    <% } %>
+</section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
